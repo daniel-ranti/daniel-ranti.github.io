@@ -75,6 +75,15 @@ author:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
+excerpt: "This post should display a **header with an overlay image**, if the theme supports it."
+header:
+  overlay_image: /assets/images/temp_header.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  actions:
+    - label: "More Info"
+      url: "https://unsplash.com"
+
+
 footer:
   links:
     - label: "Twitter"
@@ -88,12 +97,24 @@ footer:
       url: "https://instagram.com/"
 
 defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: splash
+      excerpt: "Bettering the lives of patients with genitourinary cancer"
+      header:
+        overlay_image: /assets/images/temp_header.jpg
+        overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+        caption: "Photo credit: Temp"
+        actions:
+          - label: "More Info"
+            url: "/about/"
   # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: splash
       author_profile: true
       read_time: true
       comments: true
